@@ -6,6 +6,6 @@ $t = $_POST['texto'];
 $t = str_replace("/","", $t); //sin barras
 $t = str_replace(chr(92), "", $t); //sin barras invertidas
 
-fwrite ($arch, $_POST['texto']);
-
+fwrite ($arch, $t);
+fclose ($arch);
 echo 'ok'
